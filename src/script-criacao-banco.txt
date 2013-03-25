@@ -1,0 +1,67 @@
+DROP TABLE contatos CASCADE;
+CREATE TABLE contatos
+(
+   id                BIGINT         NOT NULL,
+   nome              VARCHAR(255),
+   email             VARCHAR(255),
+   endereco          VARCHAR(255),
+   `dataNascimento`  DATE
+)
+ENGINE=InnoDB;
+
+ALTER TABLE contatos
+   ADD CONSTRAINT pk_contatos
+   PRIMARY KEY (id);
+   
+INSERT INTO contatos
+(
+  id,
+  nome,
+  email,
+  endereco,
+  `dataNascimento`
+)
+VALUES
+(
+  1,
+  'Renato',
+  'rbatista@scale.com.br',
+  'Rua Jacupiranga, 236',
+  '1980-07-04'
+);
+
+INSERT INTO contatos
+(
+  id,
+  nome,
+  email,
+  endereco,
+  `dataNascimento`
+)
+VALUES
+(
+  2,
+  'João',
+  'jao@mailinator.com',
+  'Rua Almeida Prado, 2216',
+  '1970-04-15'
+);
+
+INSERT INTO contatos
+(
+  id,
+  nome,
+  email,
+  endereco,
+  `dataNascimento`
+)
+VALUES
+(
+  3,
+  'Amarildo Pereira',
+  'amarildo@mailinator.com',
+  'Rua dos Jacarandás, 380',
+  '2013-03-25'
+);
+
+   
