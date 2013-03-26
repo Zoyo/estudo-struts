@@ -15,7 +15,7 @@
 			<tr>
 				<th>ID</th>
 				<th>Nome</th>
-				<th>Editar</th>
+				<th colspan="2">Opções</th>
 			</tr>
 		</thead>
 		<c:forEach var="contato" items="${contatos}">
@@ -23,6 +23,7 @@
 				<td>${contato.id}</td>
 				<td>${contato.nome}</td>
 				<td><a href="removeContato.do?id=${contato.id}">Remover</a></td>
+				<td><a href="carregaContatoParaEdicao.do?id=${contato.id}">Editar</a></td>
 			</tr>	
 		</c:forEach>
 	</table>

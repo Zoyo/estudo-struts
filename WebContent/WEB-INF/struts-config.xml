@@ -7,6 +7,9 @@
 	<form-beans>
 		<form-bean name="ContatoForm" 
 				   type="struts.estudo.struts.form.ContatoForm" />
+				   
+		<form-bean name="EditaForm" 
+				   type="struts.estudo.struts.form.EditaForm" />
 	</form-beans>
 	
 	<action-mappings>
@@ -25,6 +28,19 @@
 				type="struts.estudo.struts.action.AdicionaContatoAction" 
 				name="ContatoForm" 
 				input="/novo.jsp">
+			<forward name="ok" path="/listaContatos.do" />
+		</action>
+		
+		<action path="/carregaContatoParaEdicao"
+				type="struts.estudo.struts.action.CarregaContatoParaEdicao">
+			<forward name="ok" path="/edita.jsp" />
+			<forward name="sem-contato" path="/listaContatos.do" />
+		</action>
+		
+		<action path="/editaContato"
+				type="struts.estudo.struts.action.EditaContatoAction"
+				name="EditaForm"
+				input="/edita.jsp">
 			<forward name="ok" path="/listaContatos.do" />
 		</action>
 		
